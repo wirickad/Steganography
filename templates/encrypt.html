@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encrypt</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Encrypt an Image</h1>
+    <form method="POST" action="/encrypt" enctype="multipart/form-data">
+      <label>Select the image you would like to encrypt your message into</label
+      ><br /><br />
+      <input type="file" name="image" required /><br /><br />
+      <textarea
+        name="message"
+        placeholder="Enter the message to encrypt"
+        required
+      ></textarea
+      ><br /><br />
+      <input type="submit" value="Encrypt" />
+    </form>
+    <div class="button-container">
+      <a href="{{ url_for('decrypt') }}"><button>Decrypt an Image</button></a>
+      <a href="{{ url_for('index') }}"><button>Home</button></a>
+    </div>
+  </body>
+</html>

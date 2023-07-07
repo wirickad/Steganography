@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Message Encrypter</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Steganography Web App</h1>
+    <h3>Send and receive images containing hidden messages!</h3>
+
+    <a href="{{ url_for('encrypt') }}"><button>Encrypt</button></a>
+    <a href="{{ url_for('decrypt') }}"><button>Decrypt</button></a>
+  </body>
+</html>
